@@ -1,3 +1,4 @@
 scrapy
 scrapyd
 herokuify-scrapyd
+scrapeops-scrapy
