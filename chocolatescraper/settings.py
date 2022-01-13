@@ -19,6 +19,23 @@ NEWSPIDER_MODULE = 'chocolatescraper.spiders'
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
 
+# Add Your ScrapeOps API key
+SCRAPEOPS_API_KEY = 'df079156-1232-41f4-994c-955c3924aef4'
+
+
+# Add In The ScrapeOps Extension
+EXTENSIONS = {
+'scrapeops_scrapy.extension.ScrapeOpsMonitor': 500, 
+}
+
+
+# Update The Download Middlewares
+DOWNLOADER_MIDDLEWARES = {
+'scrapeops_scrapy.middleware.retry.RetryMiddleware': 550,
+'scrapy.downloadermiddlewares.retry.RetryMiddleware': None,
+}
+    
+
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
 
